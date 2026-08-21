@@ -1,5 +1,6 @@
 /* В правой части — деловые УТП вместо фотографии. */
 .top { align-items:stretch; }
+.top h1 { font-size:clamp(36px,3.7vw,57px); }
 .top__copy { display:flex; flex-direction:column; justify-content:center; }
 .benefit-panel { border-radius:14px; overflow:hidden; background:var(--ink); color:#fff; box-shadow:16px 16px 0 #dedbd3; display:grid; grid-template-rows:repeat(3,1fr) auto; min-height:clamp(285px,34vh,390px); }
 .benefit-panel article { padding:18px 23px; border-bottom:1px solid rgba(255,255,255,.16); display:flex; justify-content:space-between; gap:30px; align-items:center; }
