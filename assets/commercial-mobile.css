@@ -1,0 +1,15 @@
+@media (max-width: 800px) {
+  body { overflow-x: hidden; }
+  .container { width: calc(100% - 32px); }
+  .topbar__cta { font-size: 10px; white-space: nowrap; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero__copy, .hero__visual { min-width: 0; }
+  .hero h1 { max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+  .hero__lead { max-width: 100%; }
+  .hero__visual { width: 100%; }
+}
+@media (max-width: 390px) {
+  .topbar__cta { font-size: 0; }
+  .topbar__cta b { font-size: 18px; margin: 0; }
+  .hero h1 { font-size: 31px; letter-spacing: -2px; }
+}
