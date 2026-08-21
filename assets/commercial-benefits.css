@@ -1,0 +1,11 @@
+/* В правой части — деловые УТП вместо фотографии. */
+.top { align-items:stretch; }
+.top__copy { display:flex; flex-direction:column; justify-content:center; }
+.benefit-panel { border-radius:14px; overflow:hidden; background:var(--ink); color:#fff; box-shadow:16px 16px 0 #dedbd3; display:grid; grid-template-rows:repeat(3,1fr) auto; min-height:clamp(285px,34vh,390px); }
+.benefit-panel article { padding:18px 23px; border-bottom:1px solid rgba(255,255,255,.16); display:flex; justify-content:space-between; gap:30px; align-items:center; }
+.benefit-panel article strong { color:var(--yellow); font:800 clamp(26px,3.3vw,47px)/1 Unbounded,sans-serif; letter-spacing:-3px; white-space:nowrap; }
+.benefit-panel article p { margin:0; max-width:205px; font-size:12px; font-weight:700; line-height:1.3; }
+.benefit-panel footer { padding:12px 23px; background:var(--yellow); color:var(--ink); font-size:9px; line-height:1.35; font-weight:700; }
+.benefit-panel footer b { display:block; margin-bottom:2px; }
+.top .facts { display:none; }
+@media(max-width:850px){.benefit-panel{min-height:0;box-shadow:10px 10px 0 #dedbd3}.benefit-panel article{padding:19px}.benefit-panel article strong{font-size:31px}.benefit-panel article p{font-size:11px}.benefit-panel footer{font-size:10px}}
