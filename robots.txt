@@ -1,0 +1,5 @@
+# TODO перед публикацией: заменить домен на реальный
+User-agent: *
+Allow: /
+
+Sitemap: https://vionex-leads.ru/sitemap.xml
