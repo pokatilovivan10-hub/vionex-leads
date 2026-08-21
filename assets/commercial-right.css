@@ -1,0 +1,28 @@
+/* Вариант витрины: весь контент собран справа, без фото. */
+.top { display: block; padding-top: clamp(48px, 9vh, 108px); }
+.top__copy { width: min(100%, 960px); margin-left: auto; text-align: right; }
+.eyebrow { margin-left: auto; }
+h1 { margin-left: auto; }
+.lead { margin-left: auto; }
+.facts { justify-content: flex-end; }
+.facts article { text-align: right; }
+.tariffs { width: min(100%, 1040px); margin-left: auto; }
+.plan { text-align: right; }
+.plan li { padding-left: 0; padding-right: 13px; }
+.plan li:before { left: auto; right: 0; }
+.plan a { margin-left: auto; }
+.sheet__foot { text-align: right; grid-template-columns: 1.25fr .9fr 1fr; }
+.route { order: -1; }
+.sheet__foot small { text-align: right; }
+@media (max-width: 850px) {
+  .top { padding-top: 34px; }
+  .top__copy { text-align: left; }
+  .eyebrow, h1, .lead { margin-left: 0; }
+  .facts { justify-content: initial; }
+  .facts article, .plan, .sheet__foot, .sheet__foot small { text-align: left; }
+  .tariffs { margin-left: 0; }
+  .plan li { padding-left: 13px; padding-right: 0; }
+  .plan li:before { left: 0; right: auto; }
+  .plan a { margin-left: 0; }
+  .route { order: 0; }
+}
