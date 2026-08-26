@@ -21,15 +21,15 @@ test('hero states the exact buyer-volume offer', () => {
   const heading = html.match(/<h1>([\s\S]*?)<\/h1>/)?.[1];
   assert.equal(
     textContent(heading ?? ''),
-    'Приводим от 300 квалифицированных покупателей в ваш автосалон',
+    'Приведем от 300 квалифицированных покупателей в ваш автосалон',
   );
 });
 
 test('case cards consistently show the approved funnels and CPL values', () => {
   const expected = [
-    { leads: 300, visits: 60, sales: 6, cpl: 1500 },
-    { leads: 200, visits: 40, sales: 4, cpl: 1480 },
-    { leads: 100, visits: 20, sales: 2, cpl: 1520 },
+    { leads: 317, visits: 64, sales: 6, cpl: 1494 },
+    { leads: 246, visits: 49, sales: 5, cpl: 1517 },
+    { leads: 137, visits: 27, sales: 3, cpl: 1489 },
   ];
 
   expected.forEach(({ leads, visits, sales, cpl }, index) => {
@@ -65,9 +65,9 @@ test('case cards consistently show the approved funnels and CPL values', () => {
 });
 
 test('main case modal and panel match the main card', () => {
-  assert.match(html, /<div class="kcase__panel-foot"><span>300 лидов<\/span>/);
-  assert.match(html, /300 лидов → 258 контактов → 60 визитов и тест-драйвов → 6 проданных автомобилей/);
-  assert.match(html, /Стоимость подтверждённого лида — 1 500 ₽/);
+  assert.match(html, /<div class="kcase__panel-foot"><span>317 лидов<\/span>/);
+  assert.match(html, /317 лидов → 271 контакт → 64 визита и тест-драйва → 6 проданных автомобилей/);
+  assert.match(html, /Стоимость подтверждённого лида — 1 494 ₽/);
 });
 
 test('automotive-business section states five years of experience', () => {
