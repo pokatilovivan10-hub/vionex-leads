@@ -43,4 +43,3 @@ Expected: PASS.
 **Step 6: Commit**
 
 `git add index.html tests/content.test.mjs docs/plans && git commit -m "Update VIONEX offer and case metrics"`
-
