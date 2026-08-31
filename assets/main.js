@@ -374,6 +374,7 @@
       sendLead(payload)
         .then(function () {
           trackGoal(goal + '_success');
+          trackGoal('formwin');
           var wrap = form.closest('.form-wrap');
           if (wrap) {
             wrap.classList.add('sent');

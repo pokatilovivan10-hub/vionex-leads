@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const mainJs = await readFile(new URL('../assets/main.js', import.meta.url), 'utf8');
 
 function textContent(fragment) {
   return fragment
@@ -72,4 +73,9 @@ test('main case modal and panel match the main card', () => {
 
 test('automotive-business section states five years of experience', () => {
   assert.match(html, /5 лет работаем в автомобильном бизнесе/);
+});
+
+test('successful form submission sends the shared Yandex Metrika goal', () => {
+  const successHandler = mainJs.match(/sendLead\(payload\)[\s\S]*?\.then\(function \(\) \{([\s\S]*?)\n\s*\}\)/)?.[1] ?? '';
+  assert.match(successHandler, /trackGoal\('formwin'\)/);
 });
