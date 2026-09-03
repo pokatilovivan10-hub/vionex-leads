@@ -309,6 +309,9 @@
     data.page = window.location.href;
     data.utm = utmData;
     data.ts = new Date().toISOString();
+    data.requestId = (window.crypto && typeof window.crypto.randomUUID === 'function')
+      ? window.crypto.randomUUID()
+      : String(Date.now()) + '-' + Math.random().toString(16).slice(2);
     return data;
   }
 
